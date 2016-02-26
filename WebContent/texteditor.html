@@ -195,7 +195,20 @@
                 </div>
             </div>
           <!-- end: Left Menu -->
+<script type="text/javascript">
 
+$('.summernote').each(function () {
+    var $textArea = $(this);
+
+    $textArea.summernote({
+        onKeyup: function (e) {
+            $textArea.val($(this).code());
+            $textArea.change(); //To update any action binded on the control
+        }
+    });
+});
+
+</script>
 
       <!-- start: Content -->
         <div id="content">
